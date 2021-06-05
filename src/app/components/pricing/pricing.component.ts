@@ -12,4 +12,8 @@ export class PricingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  redirectToDS(){
+    window.open("https://discord.gg/UTBT37mcUm")
+  }
+
 }
