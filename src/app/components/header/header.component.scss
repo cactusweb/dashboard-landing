@@ -1,0 +1,50 @@
+$tab-size: 780px;
+
+
+header{
+    position: relative;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+
+    >div{
+        display: grid;
+        row-gap: 30px;
+        @media screen and ( min-width: $tab-size+1 ) {
+            background-image: url('/assets/img/header/illustration.svg');
+            background-position: center right;
+            background-repeat: no-repeat;
+            img{
+                display: none;
+            }
+        }
+        @media screen and ( max-width: $tab-size ) {
+            justify-items: center;
+            align-self: center;
+        }
+
+        img{
+            max-width: 400px;
+            width: 90%;
+        }
+
+    }
+    
+}
+
+
+.info{
+    display: grid;
+    row-gap: 24px;
+    justify-items: start;
+    justify-self: start;
+    align-self: center;
+    @media screen and ( max-width: $tab-size ) {
+        justify-items: center;
+        justify-self: center;
+        text-align: center;
+    }
+}
+
+

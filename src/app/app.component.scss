@@ -1,0 +1,28 @@
+$tab-size: 780px;
+
+main{
+    display: grid;
+    row-gap: 150px;
+    @media screen and ( max-width: $tab-size ) {
+        row-gap: 120px;
+    }
+}
+
+app-header{
+    margin-bottom: 120px;
+    @media screen and ( max-width: $tab-size ) {
+        margin-bottom: 80px;
+    }
+}
+
+app-feedback{
+    position: relative;
+}
+
+app-footer{
+    margin-top: 80px;
+    @media screen and ( max-width: 600px ) {
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+}

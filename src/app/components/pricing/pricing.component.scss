@@ -1,0 +1,81 @@
+$tab-size: 780px;
+
+.pricing{
+    display: grid;
+    row-gap: 80px;
+    column-gap: 40px;
+    @media screen and ( max-width: $tab-size ) {
+        row-gap: 40px;
+    }
+}
+
+h2{
+    @media screen and ( min-width: $tab-size+1 ) {
+        grid-column: 1/3;
+    }
+    @media screen and ( max-width: $tab-size ) {
+        margin-bottom: 20px;
+    }
+}
+
+
+p.price{
+    font-size: 24px;
+    font-weight: 600;
+    color: #3E84E6;
+    @media screen and ( max-width: $tab-size ) {
+        font-size: 18px;
+    }
+
+    > span{
+        font-size: 16px;
+        font-weight: 500;
+        color: #7FA6E1;
+    }
+}
+
+
+.card{
+    border-radius: 15px;
+    padding: 30px 45px;
+    display: grid;
+    row-gap: 24px;
+    justify-items: start;
+    &:nth-child(2){
+        box-shadow: 14px 13px 21px rgba(127, 166, 225, 0.15);
+        button{
+            margin-top: 15px;
+            justify-self: center;
+            width: 100%;
+            @media screen and ( min-width: $tab-size+1 ){
+                height: 44px;
+            }
+        }
+        @media screen and ( max-width: $tab-size ) {
+            row-gap: 17px;
+        }
+    }
+    grid-auto-rows: min-content;
+    p.descript{
+        font-weight: 400;
+    }
+
+    @media screen and ( max-width: $tab-size ) {
+        padding: 15px 8px;
+    }
+}
+
+
+
+ul{
+    list-style: none;
+    display: grid;
+    row-gap: 15px;
+    li{
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto 1fr;
+        column-gap: 8px;
+        font-weight: 500;
+    }
+}

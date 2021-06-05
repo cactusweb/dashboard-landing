@@ -1,0 +1,64 @@
+$tab-size: 780px;
+
+.artboard{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    left: 50%;
+    width: 100vw;
+    z-index: 1;
+    background-color: #F3F8FF;
+    transform: translate(-50%, 0%);
+}
+
+form{
+    display: grid;
+    padding: 30px 0px;
+    @media screen and ( max-width: $tab-size ) {
+        padding: 15px 0px;
+    }
+    row-gap: 35px;
+    z-index: 2;
+    position: relative;
+}
+
+.descript{
+    display: grid;
+    row-gap: 8px;
+}
+
+fieldset{
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 15px;
+    justify-self: start;
+    @media screen and ( max-width: $tab-size ) {
+        justify-self: stretch;
+    }
+    border: none;
+}
+
+input{
+    width: 365px;
+    @media screen and ( max-width: $tab-size ) {
+        width: 100%;
+    }
+}
+
+input{
+    border: 1px solid transparent;
+    &.ng-invalid.ng-touched{
+        border-color: #FF9F9F;
+    }
+    padding-right: 0px;
+}
+
+
+button{
+    position: relative;
+    &.error{
+        background-color: #FF8383;
+    }
+}
