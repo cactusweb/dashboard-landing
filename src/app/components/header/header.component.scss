@@ -12,7 +12,7 @@ header{
         display: grid;
         row-gap: 30px;
         @media screen and ( min-width: $tab-size+1 ) {
-            background-image: url('/assets/img/header/illustration.svg');
+            background-image: url('/shared/img/header/illustration.svg');
             background-position: center right;
             background-repeat: no-repeat;
             img{
