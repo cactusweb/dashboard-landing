@@ -10,7 +10,7 @@
         <button class="btn-primary" 
             [ngSwitch]="successfulSubmit" 
             [disabled]=" successfulSubmit == 'loading' "
-            [ngClass]="{ 'error': successfulSubmit === false }"
+            [ngClass]="{ 'error': successfulSubmit === false, 'success': successfulSubmit === true }"
         >
                 <ng-template [ngSwitchCase]="null"> Send </ng-template>
                 

@@ -28,6 +28,9 @@ export class FeedbackComponent implements OnInit {
     
 
     if ( this.successfulSubmit !== null ){
+      if ( this.successfulSubmit )
+        this.feedbackForm.reset();
+
       this.successfulSubmit = null;
       this.submited = false;
       return;
@@ -44,7 +47,6 @@ export class FeedbackComponent implements OnInit {
     await this.http.postWhFeedback( this.feedbackForm.value )
       .then( w => {
         this.successfulSubmit = true;
-        this.feedbackForm.reset();
         
       })
       .catch( e => {
