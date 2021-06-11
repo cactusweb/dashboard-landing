@@ -4,7 +4,7 @@ This project is landing of CactusDashboards [CactusDash](https://vk.com/cactus_w
 Landing url: Not available now <br />
 Manager url: [https://manager.cactusweb.io](https://manager.cactusweb.io) <br /> <br />
 
-***Copyright and exclusive use rights belongs to [CactusWeb](https://vk.cpm/cactus_web).*** <br />
+***Copyright and exclusive use rights belongs to [CactusWeb](https://vk.com/cactus_web).*** <br />
 
 ## Development
 
