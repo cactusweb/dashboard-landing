@@ -1,4 +1,12 @@
-# DashLanding
+# Dashboard Landing
+
+This project is landing of CactusDashboards [CactusDash](https://vk.com/cactus_web). <br />
+Landing url: Not available now <br />
+Manager url: [https://manager.cactusweb.io](https://manager.cactusweb.io) <br /> <br />
+
+***Copyright and exclusive use rights belongs to [CactusWeb](https://vk.cpm/cactus_web).*** <br />
+
+## Development
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.1.
 

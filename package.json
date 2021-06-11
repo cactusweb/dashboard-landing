@@ -1,6 +1,11 @@
 {
   "name": "dash-landing",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "author": {
+    "name": "CactusWeb",
+    "email": "info@cactusweb.io",
+    "url": "https://githib.com/cactusweb"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
