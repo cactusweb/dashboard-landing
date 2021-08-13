@@ -1,6 +1,6 @@
 <nav>
     <div class="branding">
-        <img src="/shared/logo.svg" alt="" class="logo">
+        <img src="/assets/logo.svg" alt="" class="logo">
         <p>
             Cactus <br>
             Dashboard
@@ -8,14 +8,14 @@
     </div>
 
     <ul>
-        <li> <a href="#features">Features</a> </li>
-        <li> <a href="#pricing">Pricing</a> </li>
-        <li> <a href="#contacts">Contacts</a> </li>
+        <li> <a href="#features" (click)="scrollTo('features', $event)">Features</a> </li>
+        <li> <a href="#pricing" (click)="scrollTo('pricing', $event)">Pricing</a> </li>
+        <li> <a href="#contacts" (click)="scrollTo('contacts', $event)">Contacts</a> </li>
     </ul>
 
     <ul>
-        <li> <a href="/login">Sign in</a> </li>
-        <li> <a class="btn-primary" href="/sign-up">Sign up</a> </li>
+        <li> <a target="_blank" href="https://manager.cactusweb.io/login">Sign in</a> </li>
+        <li> <a class="btn-primary" target="_blank" href="https://manager.cactusweb.io/sign-up">Sign up</a> </li>
     </ul>
 
     <span class="btn-menu" [ngClass]="{ 'active': isActive }" (click)="changeStateMenu( false )">
@@ -27,14 +27,14 @@
 
     <div class="menu" [ngClass]="{ 'active': isActive }">
         <ul>
-            <li> <a href="#features" (click)="changeStateMenu( true )">Features</a> </li>
-            <li> <a href="#pricing" (click)="changeStateMenu( true )">Pricing</a> </li>
-            <li> <a href="#contacts" (click)="changeStateMenu( true )">Contacts</a> </li>
+            <li> <a href="#features" (click)="changeStateMenu( true );scrollTo('features', $event)">Features</a> </li>
+            <li> <a href="#pricing" (click)="changeStateMenu( true );scrollTo('pricing', $event)">Pricing</a> </li>
+            <li> <a href="#contacts" (click)="changeStateMenu( true );scrollTo('contacts', $event)">Contacts</a> </li>
         </ul>
     
         <ul>
-            <li> <a href="/login" (click)="changeStateMenu( true )">Sign in</a> </li>
-            <li> <a class="btn-primary" href="/sign-up" (click)="changeStateMenu( true )">Sign up</a> </li>
+            <li> <a target="_blank" href="https://manager.cactusweb.io/sign-up" (click)="changeStateMenu( true )">Sign in</a> </li>
+            <li> <a class="btn-primary" target="_blank" href="https://manager.cactusweb.io/login" (click)="changeStateMenu( true )">Sign up</a> </li>
         </ul>
     </div>
     

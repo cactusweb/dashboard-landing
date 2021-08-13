@@ -30,4 +30,13 @@ export class NavbarComponent implements OnInit {
    
   }
 
+
+  scrollTo( id: string, e: any ){
+    e.preventDefault();
+    document.getElementById(id).scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+    })
+  }
+
 }

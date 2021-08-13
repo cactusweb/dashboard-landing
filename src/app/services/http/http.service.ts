@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class HttpService {
   ) { }
 
 
-  async postWhFeedback( data: { contact: string } ){
+  postWhFeedback( data: { contact: string } ): Observable<any>{
     let body = {
       "username": "CactusDashboard",
       "avatar_url": "https://dashboard.cactusweb.io/assets/img/logo/logo.png",
@@ -38,7 +39,7 @@ export class HttpService {
       ]
     }
 
-    return await this.http.post( this.whUrl, body ).toPromise();
+    return this.http.post( this.whUrl, body );
   }
 
 }
