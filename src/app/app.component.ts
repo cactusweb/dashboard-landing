@@ -22,6 +22,20 @@ export class AppComponent implements OnInit {
       anchorPlacement: 'top-top', // defines which position of the element regarding to window should trigger the animation
     
     });
+    this.listenLoadPage()
+
+  }
+
+  
+  listenLoadPage(){
+    // удаляем элемент, который должен быть на странице только до полной загрузки
+    window.onload = () => {
+      setTimeout( 
+        () => document.querySelector('#beforeLoad')?.remove(), 
+        400
+      )
+    }
+
   }
 
 
