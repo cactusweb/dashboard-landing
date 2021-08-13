@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { HttpService } from 'src/app/services/http/http.service';
+import { finalize, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-feedback',
@@ -44,15 +45,13 @@ export class FeedbackComponent implements OnInit {
     this.spinner.show();
     this.successfulSubmit = 'loading';
   
-    await this.http.postWhFeedback( this.feedbackForm.value )
-      .then( w => {
-        this.successfulSubmit = true;
-        
-      })
-      .catch( e => {
-        this.successfulSubmit = false;
-      })
-      this.spinner.show();
+    this.http.postWhFeedback( this.feedbackForm.value )
+      .pipe( take(1), finalize( () => { this.spinner.hide() }) )
+      .subscribe(
+        res => this.successfulSubmit = true,
+        err => this.successfulSubmit = false,
+        () => this.successfulSubmit = true
+      )
   }
 
   
