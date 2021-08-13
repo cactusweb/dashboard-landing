@@ -66,6 +66,13 @@ button:disabled{
     cursor: pointer;
 }
 
+*:not(h1):selection{
+    background-color: #3E84E6;
+    color: #fff;
+    text-shadow: 0 2px 3px #262e374d;
+    
+}
+
 
 
 
