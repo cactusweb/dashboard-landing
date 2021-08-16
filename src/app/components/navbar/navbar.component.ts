@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -8,10 +10,23 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   isActive: boolean = false;
+  fragment: string | undefined;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {
+    this.activatedRoute.fragment
+      .pipe( take(1) )
+      .subscribe(
+        res => this.fragment = res
+      )
+   }
 
   ngOnInit() {
+    setTimeout(() => {
+      if ( this.fragment ) this.scrollTo( this.fragment )
+    }, 200);
   }
 
   changeStateMenu( timeout: boolean = false ){
@@ -31,9 +46,12 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  scrollTo( id: string, e: any ){
-    e.preventDefault();
-    document.getElementById(id).scrollIntoView({
+  scrollTo( id: string, e?: any ){
+    e?.preventDefault();
+
+    this.router.navigate(['/'], { fragment: id })
+
+    document.getElementById(id)?.scrollIntoView({
       block: 'start',
       behavior: 'smooth',
     })

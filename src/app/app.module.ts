@@ -16,6 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { HomeComponent } from './screens/home/home.component';
+import { NotFoundComponent } from './screens/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     FooterComponent,
     FeaturesComponent,
     PricingComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
